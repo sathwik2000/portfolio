@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>My Website</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Sathwik</title>
 </head>
-
 <body style="color:black;">
   <!-- Header -->
   <section id="header">
     <div class="header container">
       <div class="nav-bar">
         <div class="brand">
-          <a href="#hero">
+          <a href="#sathwik">
             <h1><span>S</span>athwik <span>K</span>owtha</h1>
           </a>
         </div>
@@ -23,9 +23,9 @@
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#sathwik" data-after="Home">Home</a></li>
             <!-- <li><a href="skills.html" data-after="skills">Skills</a></li> -->
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
+            <li><a href="#projects" data-after="Projects" id="getProject">Projects</a></li>
             <li><a href="#about" data-after="About">About</a></li>
             <li><a href="#contact" data-after="Contact">Contact</a></li>
           </ul>
@@ -36,94 +36,94 @@
   <!-- End Header -->
 
 
-  <!-- Hero Section  -->
-  <section id="hero">
-    <div class="hero container">
+  <!-- sathwik Section  -->
+  <section id="sathwik">
+    <div class="sathwik container">
       <div>
         <h1>Hello, <span></span></h1>
         <h1>My Name is <span></span></h1>
         <h1>Sathwik <span></span></h1>
-        <a href="#projects" type="button" class="cta">Portfolio</a>
+        <a href="#projects" type="button" class="cta" id="addProject">Portfolio</a>
       </div>
     </div>
   </section>
-  <!-- End Hero Section  -->
+  <!-- End sathwik Section  -->
 
   <!-- Projects Section -->
   <section id="projects">
-    <div class="projects container">
-      <div class="projects-header">
+    <div class="projects container" id="projectCont">
+      <div class="projects-header" id="projectHead">
         <h1 class="section-title"><span>Projects</span></h1>
       </div>
       <div class="all-projects">
-        <div class="project-item">
+        <div class="project-item" id="project1">
           <div class="project-info">
-            <h1><a href="https://www.youtube.com/watch?v=XkC83zKkGPg" style="color:crimson;">Student Fusion</a></h1>
+            <h1><a href="https://www.youtube.com/watch?v=XkC83zKkGPg" style="color:crimson;"><div class="text-3d">Student Fusion</div></a></h1>
             <h2>Django</h2>
             <p>It's a social media application where one can upload his works wit tags and people who follow those tags will get these works and one can follow another person then irrespective of tag all the works of him will be delivered to the person who is following. Focused on backend tried to implement securely used rest APIs as well. Implemented using Django, JS, jQuery, HTML, CSS, etc.</p>
           </div>
           <div class="project-img">
-            <img src="./img/project1.png" alt="img">
+            <img src="./img/project1.png" style='height: 100%; width: 100%; object-fit: contain' alt="img">
           </div>
         </div>
-        <div class="project-item">
+        <div class="project-item" id="project2">
           <div class="project-info">
             <h1><a href="https://www.youtube.com/watch?v=tbCwsSR2GMk" style="color:crimson;">Student Fusion</a></h1>
             <h2>Voice Assistant</h2>
             <p>Fusion is a voice assistant which can perform different tasks like playing music, sending mails, reminding things etc. Developed it using different languages like c, Java, python, bat.</p>
           </div>
           <div class="project-img">
-            <img src="./img/project2.jpeg" alt="img">
+            <img src="./img/project2.jpeg" style='height: 100%; width: 100%; object-fit: contain' alt="img">
           </div>
         </div>
-        <div class="project-item">
+        <div class="project-item" id="project3">
           <div class="project-info">
             <h1><a href="https://codechef.com/users/sl170030673" style="color:crimson;">CodeChef Rating</a></h1>
             <h2>Competitive Programming</h2>
             <p>Have a 5 🌟 rating in CodeChef solved many problems and even created many contests in codechef.</p>
           </div>
           <div class="project-img">
-            <img src="./img/project3.PNG" alt="img">
+            <img src="./img/project3.PNG" style='height: 100%; width: 100%; object-fit: contain' alt="img">
           </div>
         </div>
-        <div class="project-item">
+        <div class="project-item" id="project4">
           <div class="project-info">
             <h1><a href="http://sersc.org/journals/index.php/IJCA/article/view/18881/9577" style="color:crimson;">Emotion detection from speech "Published"</a></h1>
             <h2>Research Paper</h2>
             <p>In python implemented emotion detection from speech used different models like CNN, LSTM, SVM, NN, etc. and different refinement techniques along with different normalization techniques and analyzed the results. Got different accuracies published a paper on it too.</p>
           </div>
           <div class="project-img">
-            <img src="./img/project4.png" alt="img">
+            <img src="./img/project4.png" style='height: 100%; width: 100%; object-fit: contain' alt="img">
           </div>
         </div>
-        <div class="project-item">
+        <div class="project-item" id="project5">
           <div class="project-info">
             <h1><a href="https://www.youtube.com/watch?v=BEUuXvc3wik" style="color:crimson;">Emotion detection</a></h1>
             <h2>Emotion detection</h2>
             <p>Implemented emotion detection from video in python using different libraries like OpenCV, haar cascade model was trained using more than 2000 images </p>
           </div>
           <div class="project-img">
-            <img src="./img/project5.png" alt="img">
+            <img src="./img/project5.png" style='height: 100%; width: 100%; object-fit: contain' alt="img">
           </div>
         </div>
-        <div class="project-item">
+        <div class="project-item" id="project6">
           <div class="project-info">
             <h1>Portfolio</h1>
             <h2>AWS</h2>
             <p>Designed a dynamic web site using Django frame work, HTML, CSS, JS, jQuery, SQLite3 and deployed in AWS.</p>
           </div>
           <div class="project-img">
-            <img src="./img/project6.png" alt="img">
+            <img src="./img/project6.png" style='height: 100%; width: 100%; object-fit: contain' alt="img">
           </div>
         </div>
-        <div class="project-item">
+        <div class="project-item" id="project7">
           <div class="project-info">
             <h1>Conky</h1>
             <h2>linux</h2>
             <p>Implemented my own conky in Linux which changes colour depending on battery 🔋and it’s transparent.</p>
           </div>
           <div class="project-img">
-            <img src="./img/project7.jpeg" alt="img">
+            <img src="./img/project7.jpeg" style='height: 100%; width: 100%; object-fit: contain' alt="img">
           </div>
         </div>
       </div>
@@ -136,19 +136,18 @@
     <div class="about container">
       <div class="col-left">
         <div class="about-img">
-          <img src="./img/sathwik.jpg" alt="img">
+          <img src="./img/sathwik.jpg" alt="img" id="mypic">
         </div>
       </div>
       <div class="col-right">
         <h1 class="section-title">About <span>me</span></h1>
-        <h2>Front End Developer</h2>
         <p>I have good knowledge in competitive coding have a   5-star rating in CodeChef  , have a rating of 1596 in hacker earth, have 6 gold badges in hacker rank along with 1 silver medal and 2 bronze medals got 89th rank in one of the div 2 long challenge where around 14000 people participated also got 124th rank in one of the div 1 long challenge where around 1200 people participated. I cleared CodeChef Certified Data Structure & Algorithms Programme Foundation level. Also created lot many contest as part of SOCC School of Competitive Coding in K L University. I have deployed my own websites on AWS worked on flask, Django backend frameworks and jQuery, Angularjs frontend frameworks also worked on c++ have published a paper have worked on different projects related to ML as well.
           <br>
           <h2>Work experiance:</h2><br>
-          <h2>NCR</h2><br>
+          <h2 class="company">NCR</h2><br>
           <h3>intern Apr 21 - present</h3><br>
           <p>Working on AMS-UE it is developed in c++ for fast response time in validates offers for customers and allow them to redeem offers.</p><br>
-          <h2>CDK Global</h2><br>
+          <h2 class="company">CDK Global</h2><br>
           <h3>intern Aug 20 - Apr 21</h3><br>
           <p>Worked on proton it is a automation tool developed in flask and angularjs using proton one can automate any service which have api support I have added few functionalities and fixed some issues.</p><br>
           <h2>Education:</h2><br>
@@ -196,7 +195,6 @@
     </div>
   </section>
   <!-- End Contact Section -->
-
   <!-- Footer -->
   <section id="footer">
     <div class="footer container">
@@ -212,6 +210,15 @@
   </section>
   <!-- End Footer -->
   <script src="./app.js"></script>
+  <script>
+    $(document).ready(function(){
+    $(".company").hover(function() {
+      $(this).stop().animate({ fontSize : '40px' });
+},
+function() {
+      $(this).stop().animate({ fontSize : '20px' });
+});
+    });
+  </script>
 </body>
-
 </html>
