@@ -24,10 +24,37 @@ a {
     width: 75px;
 }
 img {
-	height: 100%;
 	width: 100%;
+	height: auto;
 	object-fit: cover;
+	overflow: hidden;
 }
+@font-face {
+	font-family: myFirstFont;
+	src: url(NeonLights-22d.ttf);
+  }
+  
+  .title {
+	font-family: myFirstFont;
+  }
+
+  #slideshow { 
+	margin: 50px auto; 
+	position: relative; 
+	width: auto; 
+	height: 600px; 
+	padding: 10px; 
+	box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+	overflow: hidden;
+  }
+  
+  #slideshow > div { 
+	position: absolute; 
+	top: 10px; 
+	left: 10px; 
+	right: 10px; 
+	bottom: 10px; 
+  }
 p {
 	color: black;
 	font-size: 1.4rem;
@@ -88,6 +115,142 @@ p {
 	color: crimson;
 }
 
+article figure::after, article figure .image, article figure .lighting, article .item-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+  
+  article .item-wrapper, article .item-content {
+	-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+  }
+  
+  article .item-wrapper, article figure, article .item-content {
+	-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+  }
+  
+  article {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: calc(33.33% - 4%);
+	height: 24vw;
+	margin: 1.8%;
+	-webkit-perspective: 1600px;
+			perspective: 1600px;
+	cursor: pointer;
+  }
+  article .item-wrapper {
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+  article .item-wrapper::before {
+	content: '';
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
+	-webkit-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+	box-shadow: 0 8px 38px rgba(0, 0, 0, 0.86);
+  }
+  article .item-wrapper:hover::before {
+	box-shadow: 0 14px 64px rgba(0, 0, 0, 0.92);
+  }
+  article .item-wrapper.enter.ease, article .item-wrapper.leave {
+	-webkit-transition: all .1s ease-in;
+	transition: all .1s ease-in;
+  }
+  article figure {
+	width: 100%;
+	height: 100%;
+  }
+  article figure::after {
+	content: '';
+	background-color: rgba(0, 0, 0, 0.06);
+  }
+  article figure .image {
+	background-position: center;
+	background-size: cover;
+  }
+  article figure .lighting {
+	background: -webkit-linear-gradient(315deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  article .item-content {
+	pointer-events: none;
+	padding: 20% 20px 20px;
+	color: #fff;
+	text-shadow: 0 3px 10px rgba(0, 0, 0, 0.76);
+  }
+  article .item-content h1 {
+	margin-bottom: 5%;
+	-webkit-transform: translateZ(100px);
+			transform: translateZ(100px);
+  }
+  article .item-content p {
+	font-size: 13px;
+	margin-bottom: 5%;
+	-webkit-transform: translateZ(50px);
+			transform: translateZ(50px);
+  }
+  article .item-content .author {
+	-webkit-transform: translateZ(70px);
+			transform: translateZ(70px);
+  }
+  
+  @media (max-width: 860px) {
+	article {
+	  width: calc(50vw - 3.9vw);
+	  height: 38vw;
+	}
+  }
+  @media (max-width: 667px) {
+	article {
+	  width: calc(100vw - 3.9vw);
+	  height: 60vw;
+	}
+  }  
+
+.cardholder {
+  margin-top: 150px;
+          perspective: 600px;
+}
+.card {
+  width: 300px;
+  height: 300px;
+  background-color: transparent;
+          transform: rotateY(50deg);
+  box-shadow: -6px 5px 13px 2px rgba(0, 0, 0, 0.25);
+transition: all 1s ease;
+  color: transparent;
+}
+.card:hover {
+  width: 300px;
+  height: 300px;
+  background-color: transparent;
+          transform: rotateY(0deg);
+  box-shadow: 0px 0px 36px 2px rgba(0, 0, 0, 0.25);
+  color: black;
+}
+.card:hover p {
+  background-color: white;
+}
+p.desc {
+  z-index:999;
+  position: absolute;
+  top: 10px;
+  padding: 10px;
+}
+p.desc:hover {
+}
+
 /* Header section */
 #header {
 	position: fixed;
@@ -146,7 +309,7 @@ p {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
-	color: rgba(240, 248, 255, 0.021);
+	color: black;
 	font-size: 13rem;
 	letter-spacing: 50px;
 	z-index: -1;
@@ -425,8 +588,8 @@ p {
 	padding: 100px 20px;
 }
 #about .col-left {
-	width: 250px;
-	height: 360px;
+	width: 230px;
+	height: 300px;
 }
 #about .col-right {
 	width: 100%;
@@ -455,10 +618,10 @@ p {
 #about .col-left .about-img::after {
 	content: '';
 	position: absolute;
-	left: -33px;
-	top: 19px;
-	height: 98%;
-	width: 98%;
+	left: -50px;
+	top: 100px;
+	height: 100%;
+	width: 100%;
 	border: 7px solid crimson;
 	z-index: -1;
 }

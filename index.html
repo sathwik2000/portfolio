@@ -5,17 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="tagcanvas.min.js" type="text/javascript"></script>
   <title>Sathwik</title>
 </head>
 <body style="color:black;">
   <!-- Header -->
   <section id="header">
     <div class="header container">
-      <div class="nav-bar">
+      <div class="nav-bar bg-black">
         <div class="brand">
           <a href="#sathwik">
-            <h1><span>S</span>athwik <span>K</span>owtha</h1>
+            <h1 class="title"><span>S</span>athwik <span>K</span>owtha</h1>
           </a>
         </div>
         <div class="nav-list">
@@ -23,11 +26,14 @@
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href="#sathwik" data-after="Home">Home</a></li>
-            <!-- <li><a href="skills.html" data-after="skills">Skills</a></li> -->
-            <li><a href="#projects" data-after="Projects" id="getProject">Projects</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#sathwik" class="title" data-after="Home">Home</a></li>
+            <li><a href="#skills" class="title" data-after="skills">Skills</a></li>
+            <li><a href="#projects" class="title" data-after="Projects" id="getProject">Projects</a></li>
+            <li><a href="#about" class="title" data-after="About">About</a></li>
+            <li><a href="#achievements" class="title" data-after="skills">Achievements</a></li>
+            <li><a href="#contact" class="title" data-after="Contact">Contact</a></li>
+            <!-- <li><a href="#contact" class="title" data-after="Contact">Contact</a></li> -->
+            <!-- https://drive.google.com/file/d/1PMQC6f6cnMfiK901_NmGBI9oapCwVl08/view?usp=sharing -->
           </ul>
         </div>
       </div>
@@ -42,8 +48,8 @@
       <div>
         <h1>Hello, <span></span></h1>
         <h1>My Name is <span></span></h1>
-        <h1>Sathwik <span></span></h1>
-        <a href="#projects" type="button" class="cta" id="addProject">Portfolio</a>
+        <h1 class="title">Sathwik <span></span></h1>
+        <a href="#projects" type="button" class="cta title" id="addProject">Portfolio</a>
       </div>
     </div>
   </section>
@@ -53,77 +59,77 @@
   <section id="projects">
     <div class="projects container" id="projectCont">
       <div class="projects-header" id="projectHead">
-        <h1 class="section-title"><span>Projects</span></h1>
+        <h1 class="section-title title"><span>Projects</span></h1>
       </div>
       <div class="all-projects">
         <div class="project-item" id="project1">
           <div class="project-info">
             <h1><a href="https://www.youtube.com/watch?v=XkC83zKkGPg" style="color:crimson;"><div class="text-3d">Student Fusion</div></a></h1>
-            <h2>Django</h2>
+            <h2 class="title">Django</h2>
             <p>It's a social media application where one can upload his works wit tags and people who follow those tags will get these works and one can follow another person then irrespective of tag all the works of him will be delivered to the person who is following. Focused on backend tried to implement securely used rest APIs as well. Implemented using Django, JS, jQuery, HTML, CSS, etc.</p>
           </div>
           <div class="project-img">
-            <img src="./img/project1.png" style='height: 100%; width: 100%; object-fit: contain' alt="img">
+            <img src="./img/project1.png" style='height: 100%; width: 100%; ' alt="img">
           </div>
         </div>
         <div class="project-item" id="project2">
           <div class="project-info">
-            <h1><a href="https://www.youtube.com/watch?v=tbCwsSR2GMk" style="color:crimson;">Student Fusion</a></h1>
-            <h2>Voice Assistant</h2>
+            <h1><a href="https://www.youtube.com/watch?v=tbCwsSR2GMk" style="color:crimson;">Fusion</a></h1>
+            <h2 class="title">Voice Assistant</h2>
             <p>Fusion is a voice assistant which can perform different tasks like playing music, sending mails, reminding things etc. Developed it using different languages like c, Java, python, bat.</p>
           </div>
           <div class="project-img">
-            <img src="./img/project2.jpeg" style='height: 100%; width: 100%; object-fit: contain' alt="img">
+            <img src="./img/project2.jpeg" style='height: 100%; width: 100%; ' alt="img">
           </div>
         </div>
         <div class="project-item" id="project3">
           <div class="project-info">
             <h1><a href="https://codechef.com/users/sl170030673" style="color:crimson;">CodeChef Rating</a></h1>
-            <h2>Competitive Programming</h2>
+            <h2 class="title">Competitive Programming</h2>
             <p>Have a 5 🌟 rating in CodeChef solved many problems and even created many contests in codechef.</p>
           </div>
           <div class="project-img">
-            <img src="./img/project3.PNG" style='height: 100%; width: 100%; object-fit: contain' alt="img">
+            <img src="./img/project3.PNG" style='height: 100%; width: 100%; ' alt="img">
           </div>
         </div>
         <div class="project-item" id="project4">
           <div class="project-info">
             <h1><a href="http://sersc.org/journals/index.php/IJCA/article/view/18881/9577" style="color:crimson;">Emotion detection from speech "Published"</a></h1>
-            <h2>Research Paper</h2>
+            <h2 class="title">Research Paper</h2>
             <p>In python implemented emotion detection from speech used different models like CNN, LSTM, SVM, NN, etc. and different refinement techniques along with different normalization techniques and analyzed the results. Got different accuracies published a paper on it too.</p>
           </div>
           <div class="project-img">
-            <img src="./img/project4.png" style='height: 100%; width: 100%; object-fit: contain' alt="img">
+            <img src="./img/project4.png" style='height: 100%; width: 100%; ' alt="img">
           </div>
         </div>
         <div class="project-item" id="project5">
           <div class="project-info">
             <h1><a href="https://www.youtube.com/watch?v=BEUuXvc3wik" style="color:crimson;">Emotion detection</a></h1>
-            <h2>Emotion detection</h2>
+            <h2 class="title">Emotion detection</h2>
             <p>Implemented emotion detection from video in python using different libraries like OpenCV, haar cascade model was trained using more than 2000 images </p>
           </div>
           <div class="project-img">
-            <img src="./img/project5.png" style='height: 100%; width: 100%; object-fit: contain' alt="img">
+            <img src="./img/project5.png" style='height: 100%; width: 100%; ' alt="img">
           </div>
         </div>
         <div class="project-item" id="project6">
           <div class="project-info">
             <h1>Portfolio</h1>
-            <h2>AWS</h2>
+            <h2 class="title">AWS</h2>
             <p>Designed a dynamic web site using Django frame work, HTML, CSS, JS, jQuery, SQLite3 and deployed in AWS.</p>
           </div>
           <div class="project-img">
-            <img src="./img/project6.png" style='height: 100%; width: 100%; object-fit: contain' alt="img">
+            <img src="./img/project6.png" style='height: 100%; width: 100%; ' alt="img">
           </div>
         </div>
         <div class="project-item" id="project7">
           <div class="project-info">
             <h1>Conky</h1>
-            <h2>linux</h2>
+            <h2 class="title">linux</h2>
             <p>Implemented my own conky in Linux which changes colour depending on battery 🔋and it’s transparent.</p>
           </div>
           <div class="project-img">
-            <img src="./img/project7.jpeg" style='height: 100%; width: 100%; object-fit: contain' alt="img">
+            <img src="./img/project7.jpeg" style='height: 100%; width: 100%; ' alt="img">
           </div>
         </div>
       </div>
@@ -131,43 +137,313 @@
   </section>
   <!-- End Projects Section -->
 
+  <section class="bg-black" id="skills">
+    <h1 class="section-title title"><span>Skills</span></h1>
+    <div class="container">
+    <div class="row align-items-center mb-4 mb-lg-5">
+      <div id="myCanvasContainer">
+      <div  class="text-center">
+      <canvas width="600" height="600" id="myCanvas">
+        <p>Anything in here will be replaced on browsers that support the canvas element</p>
+      </canvas>
+    </div>
+    </div>
+    <div data-toggle='tooltip' title='Google' id="weightTags">
+     <ul>
+        <li><a data-weight="20" href="" target="_blank">CPP</a></li>
+        <li><a href="">Java</a></li>
+        <li><a href="">R</a></li>
+        <li><a href="">HTML</a></li>
+        <li><a href="">JavaScript</a></li>
+        <li><a href="">UIPath</a></li>
+        <li><a href="">Bat</a></li>
+        <li><a href="">AJAX</a></li>
+        <li><a href="">Django</a></li>
+        <li><a href="">jQuery</a></li>
+        <li><a href="">AWS</a></li>
+        <li><a href="">Git</a></li>
+        <li><a href="">SQL</a></li>
+        <li><a href="">MongoDB</a></li>
+        <li><a href="">Linux</a></li>
+        <li><a href="">C</a></li>
+        <li><a href="">Python</a></li>
+        <li><a href="">JSP</a></li>
+        <li><a href="">JSON</a></li>
+        <li><a href="">CSS</a></li>
+        <li><a href="">Bash</a></li>
+        <li><a href="">JDBC</a></li>
+        <li><a href="">Flask</a></li>
+      </ul>
+    </div>
+        </div>
+    </section>
+
   <!-- About Section -->
   <section id="about">
     <div class="about container">
-      <div class="col-left">
-        <div class="about-img">
-          <img src="./img/sathwik.jpg" alt="img" id="mypic">
-        </div>
-      </div>
+      <!-- <div class="col-left"> -->
+        <!-- <div class="about-img">
+          <img src="./img/sathwik.jpg" class="img-circle" alt="img" id="mypic">
+        </div> -->
+        <article>
+          <div class="item-wrapper">
+            <figure>
+              <div class="image" style="background-image:url(./img/sathwik.jpg);"></div>
+              <div class="lighting"></div>
+            </figure>
+            <div class="item-content">
+            </div>
+          </div>
+        </article>
+      <!-- </div> -->
       <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
+        <h1 class="section-title title">About <span>me</span></h1>
         <p>I have good knowledge in competitive coding have a   5-star rating in CodeChef  , have a rating of 1596 in hacker earth, have 6 gold badges in hacker rank along with 1 silver medal and 2 bronze medals got 89th rank in one of the div 2 long challenge where around 14000 people participated also got 124th rank in one of the div 1 long challenge where around 1200 people participated. I cleared CodeChef Certified Data Structure & Algorithms Programme Foundation level. Also created lot many contest as part of SOCC School of Competitive Coding in K L University. I have deployed my own websites on AWS worked on flask, Django backend frameworks and jQuery, Angularjs frontend frameworks also worked on c++ have published a paper have worked on different projects related to ML as well.
           <br>
           <h2>Work experiance:</h2><br>
-          <h2 class="company">NCR</h2><br>
+          <h2 class="company title" style="color:red;">NCR</h2><br>
           <h3>intern Apr 21 - present</h3><br>
           <p>Working on AMS-UE it is developed in c++ for fast response time in validates offers for customers and allow them to redeem offers.</p><br>
-          <h2 class="company">CDK Global</h2><br>
+          <h2 class="company title" style="color:red;">CDK Global</h2><br>
           <h3>intern Aug 20 - Apr 21</h3><br>
           <p>Worked on proton it is a automation tool developed in flask and angularjs using proton one can automate any service which have api support I have added few functionalities and fixed some issues.</p><br>
-          <h2>Education:</h2><br>
+          <h2 class="title">Education:</h2><br>
           <p>BTech (2017 - 2021): Currently pursuing my BTech in computer scince from K L University with cgpa of 9.58 .</p>
           <br>
          <p>Inter (2015 - 2017): Completed my intermediate in mpc from Sarada jr collage with a percentage of 94.2% .</p>
           <br>
           <p>SSC (2014 - 2015): Completed my SSC in CBSE from DR K K R Gowtham Educational Institution with a cgpa of 9.6 .</p>
         </p>
-        <a href="https://drive.google.com/file/d/1EhbdYECIjV82OPI0u20agfI6ojFPYqje/view?usp=drivesdk" class="cta">Resume</a>
+        <a href="https://drive.google.com/file/d/1EhbdYECIjV82OPI0u20agfI6ojFPYqje/view?usp=drivesdk" class="cta title">Resume</a>
       </div>
     </div>
   </section>
   <!-- End About Section -->
 
+  <h1 class="section-title title"><span>Achievements</span></h1>
+  <div class="container" id="achievements">
+    <div class="row">
+
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+             <img src="./img/images/hack5.PNG" />
+            <p class="desc">Problem solving(Advanced)</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/hack4.PNG" />
+   <p class="desc">JAVA (Intermediate)</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/hack7.PNG" />
+   <p class="desc">c (Intermediate)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/hack1.PNG" />
+   <p class="desc">Python</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/hack2.PNG" />
+   <p class="desc">JAVA</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/hack3.PNG" />
+   <p class="desc">Problem solving</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/hack6.PNG" />
+   <p class="desc">C++</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/uipath.PNG" />
+   <p class="desc">UIPATH</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/codechef.PNG" />
+   <p class="desc"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/dp.PNG" />
+   <p class="desc"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/code.png" />
+   <p class="desc">5 🌟 rating</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/snack.PNG" />
+   <p class="desc">Snack Down</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/simpl.PNG" />
+   <p class="desc">Data Science</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/sathwik_site.png" />
+   <p class="desc">Portfolio AWS</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/student.png" />
+   <p class="desc">Student Fusion</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="cardholder">
+          <div class="card">
+            <img src="./img/images/reas.png" />
+   <p class="desc">Published</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="./img/images/hack4.PNG" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./img/images/hack6.PNG" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="./img/images/hack7.PNG" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div> -->
+
+</script>
+<script type="text/javascript">
+  var s="400 300px/2 'Merienda One', Helvetica, sans-serif";
+  window.onload = function() {
+    try {
+      TagCanvas.Start('myCanvas','weightTags',{
+        textFont: s,
+        textColour: '#DC143C',
+        tooltip: true,
+        textHeight: 30,
+        reverse: true,
+        depth: 0.99,
+        maxSpeed: 0.09,
+        animTiming: "Smooth",
+        outlineColour: "none",
+        shuffleTags: true,
+        weight: true,
+        initial: [0.3,-0.02],
+        interval:20,
+        outlineMethod: "none",
+        reverse: true,
+        shadow: "#000011",
+        tooltipDelay: 0,
+        zoomMin: 0.5,
+        zoomMax: 4,
+        zoomStep: 0.07,
+        wheelZoom: true,
+      });
+      $("#myCanvas").hover(function(){
+          TagCanvas.SetSpeed('myCanvas', [0.15, -0.02]);
+      },function(){
+          TagCanvas.SetSpeed('myCanvas', [0.3, -0.02]);
+      });
+    } catch(e) {
+      // something went wrong, hide the canvas container
+      document.getElementById('myCanvasContainer').style.display = 'none';
+    }
+  };
+</script>
+
   <!-- Contact Section -->
   <section id="contact">
     <div class="contact container">
       <div>
-        <h1 class="section-title">Contact <span>info</span></h1>
+        <h1 class="section-title title">Contact <span>info</span></h1>
       </div>
       <div class="contact-items">
         <div class="contact-item">
@@ -199,8 +475,8 @@
   <section id="footer">
     <div class="footer container">
       <div class="brand">
-        <h1><span>S</span>athwik <span>K</span>owtha</h1>
-      </div>=
+        <h1 class="title"><span>S</span>athwik <span>K</span>owtha</h1>
+      </div>
       <div class="social-icon">
         <div class="social-item">
           <a href="https://linkedin.com/in/kowthasathwik"><img src="https://img.icons8.com/bubbles/100/000000/linkedin.png" /></a>
@@ -211,13 +487,74 @@
   <!-- End Footer -->
   <script src="./app.js"></script>
   <script>
-    $(document).ready(function(){
+    var elements = document.getElementsByClassName("column");
+
+    // Declare a loop variable
+    var i;
+
+    // Full-width images
+    function one() {
+        for (i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "100%";  // IE10
+        elements[i].style.flex = "100%";
+      }
+    }
+
+    // Two images side by side
+    function two() {
+      for (i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "50%";  // IE10
+        elements[i].style.flex = "50%";
+      }
+    }
+    var myIndex = 0;
+    var articles = $('article > .item-wrapper'),
+    lightingRgb = '255,255,255';
+
+articles.mousemove(function(e) {
+  var current = $(this),
+      x = current.width() - e.offsetX * 2,
+      y = current.height() - e.offsetY * 2,
+      rx = -x / 30,
+      ry = y / 24,
+      deg = Math.atan2(y, x) * (180 / Math.PI) + 45;
+  current.css({"transform":"scale(1.05) rotateY("+rx+"deg) rotateX("+ry+"deg)"});
+  $('figure > .lighting',this).css('background','linear-gradient('+deg+'deg, rgba('+lightingRgb+',0.32) 0%, rgba('+lightingRgb+',0) 100%)');
+});
+
+articles.on({
+  'mouseenter':function() {
+    var current = $(this);
+    current.addClass('enter ease').removeClass("leave");
+    setTimeout(function(){
+      current.removeClass('ease');
+    }, 280);
+  },
+  'mouseleave':function() {
+    var current = $(this);
+    current.css({"transform":"rotate(0)"});
+    current.removeClass('enter').addClass("leave");
+    $('figure > .lighting',this).removeAttr('style');
+  }}
+);
+  jQuery(function($){
+      //two();
+      var w = $(window).width();
+            var h = $(window).height();
+             w = w/2;
+             h = h/2;
+             var can = document.getElementById("myCanvas")
+             if(w>499||h>499);
+             {
+                 can.style.width=w;
+                 can.style.height=h;
+             }
     $(".company").hover(function() {
       $(this).stop().animate({ fontSize : '40px' });
-},
-function() {
-      $(this).stop().animate({ fontSize : '20px' });
-});
+      },
+      function() {
+            $(this).stop().animate({ fontSize : '20px' });
+      });
     });
   </script>
 </body>
